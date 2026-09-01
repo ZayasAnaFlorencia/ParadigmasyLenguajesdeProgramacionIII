@@ -1,35 +1,37 @@
+
+Styles · CSS
 /* ============================================================
    TICKETFLOW — Design tokens
    Motivo: el stub de entrada perforado (die-cut) como firma visual.
    Paleta: "backstage nocturno" con luces de marquesina.
    ============================================================ */
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
+ 
 :root{
   --void:        #14111F;
   --surface:     #1D1830;
   --surface-2:   #251E3D;
   --surface-3:   #2C2447;
   --line:        #362C54;
-
+ 
   --marquee:     #FFB627; /* ámbar de foco de escenario */
   --marquee-dim: #7A5C1C;
   --stage:       #FF4D6D; /* rosa/rojo de luz de escenario */
   --glow:        #5EEAD4; /* verde-agua glowstick, éxito */
-
+ 
   --text:        #F4F1FA;
   --text-muted:  #9A92B5;
   --text-faint:  #675E82;
-
+ 
   --font-display: 'Anton', 'Arial Narrow', sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-
+ 
   --radius: 10px;
   --radius-sm: 6px;
 }
-
+ 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
@@ -47,9 +49,9 @@ a{ color:inherit; text-decoration:none; }
 img{ max-width:100%; display:block; }
 button{ font-family:inherit; cursor:pointer; }
 :focus-visible{ outline:2px solid var(--marquee); outline-offset:3px; }
-
+ 
 .wrap{ max-width:1180px; margin:0 auto; padding:0 28px; }
-
+ 
 /* ---------- Marquee bulb divider ---------- */
 .bulbs{
   display:flex; align-items:center; gap:8px;
@@ -59,7 +61,7 @@ button{ font-family:inherit; cursor:pointer; }
   background:var(--marquee-dim);
 }
 .bulbs span:nth-child(3n+1){ background:var(--marquee); box-shadow:0 0 6px rgba(255,182,39,.8); }
-
+ 
 /* ---------- Proto nav (barra del prototipo, no forma parte del producto) ---------- */
 .proto-bar{
   background:#0B0912;
@@ -86,7 +88,7 @@ button{ font-family:inherit; cursor:pointer; }
   background:var(--surface-3); color:var(--marquee);
   border-color:var(--line);
 }
-
+ 
 /* ---------- App header (marquesina) ---------- */
 .appbar{
   background:var(--surface);
@@ -105,7 +107,7 @@ button{ font-family:inherit; cursor:pointer; }
 .appbar nav a{ font-size:14px; color:var(--text-muted); font-weight:500; }
 .appbar nav a:hover{ color:var(--text); }
 .appbar .actions{ display:flex; gap:10px; align-items:center; }
-
+ 
 /* ---------- Buttons ---------- */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
@@ -122,7 +124,7 @@ button{ font-family:inherit; cursor:pointer; }
 .btn-stage:hover{ background:#FF6B85; }
 .btn-block{ width:100%; }
 .btn-sm{ padding:8px 14px; font-size:12.5px; border-radius:6px; }
-
+ 
 /* ---------- Section titles ---------- */
 .eyebrow{
   font-family:var(--font-mono); font-size:11.5px; letter-spacing:.14em;
@@ -135,7 +137,7 @@ h1.display, h2.display{
 }
 h1.display{ font-size:clamp(34px,5vw,58px); }
 h2.display{ font-size:clamp(24px,3vw,32px); }
-
+ 
 /* =====================================================
    TICKET STUB — elemento firma del sistema
    Tarjeta con línea perforada + muescas circulares,
@@ -161,7 +163,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
 }
 .stub-perf::before{ left:-29px; }
 .stub-perf::after{ right:-29px; }
-
+ 
 /* ---------- Event ticket-stub cards (home) ---------- */
 .event-grid{
   display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
@@ -198,7 +200,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
   display:flex; gap:2px; align-items:flex-end; height:26px; opacity:.7;
 }
 .barcode i{ display:block; width:2px; background:var(--text-faint); }
-
+ 
 /* ---------- Filters / search ---------- */
 .searchbar{
   display:flex; gap:10px; margin-top:22px; flex-wrap:wrap;
@@ -215,18 +217,18 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
   border:1px solid var(--line); color:var(--text-muted);
 }
 .chip.is-active{ background:var(--marquee); border-color:var(--marquee); color:#1A1305; }
-
+ 
 /* ---------- Hero ---------- */
 .hero{ padding:56px 0 20px; }
 .hero p.lead{ color:var(--text-muted); font-size:16px; max-width:520px; margin:14px 0 0; }
-
+ 
 /* ---------- Layout: content + sidebar ---------- */
 .layout-2col{
   display:grid; grid-template-columns:1fr 360px; gap:34px;
   align-items:start; padding:34px 0 60px;
 }
 .sidebar{ position:sticky; top:88px; }
-
+ 
 /* ---------- Event detail ---------- */
 .hero-banner{
   height:280px; border-radius:var(--radius);
@@ -241,7 +243,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
   text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px;
 }
 .hero-banner h1{ font-size:clamp(28px,4vw,44px); }
-
+ 
 .date-pills{ display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 26px; }
 .date-pill{
   border:1px solid var(--line); border-radius:10px; padding:12px 16px;
@@ -252,10 +254,10 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
 .date-pill .mon{ font-size:10.5px; color:var(--text-muted); }
 .date-pill.is-active{ border-color:var(--marquee); background:rgba(255,182,39,.08); }
 .date-pill.is-active .num{ color:var(--marquee); }
-
+ 
 .prose{ color:var(--text-muted); font-size:14.5px; line-height:1.7; max-width:640px; }
 .prose h4{ color:var(--text); font-size:15px; margin:22px 0 8px; }
-
+ 
 /* ---------- Seat map ---------- */
 .stage-shape{
   background:linear-gradient(180deg, var(--surface-3), var(--surface));
@@ -275,11 +277,11 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
 .seat.campo{ background:rgba(94,234,212,.2); border-color:var(--glow); }
 .seat.sold{ background:var(--void); border-color:var(--line); opacity:.4; }
 .seat.selected{ background:var(--marquee); border-color:var(--marquee); box-shadow:0 0 0 2px rgba(255,182,39,.35); }
-
+ 
 .legend{ display:flex; gap:22px; flex-wrap:wrap; margin:30px 0; justify-content:center; }
 .legend-item{ display:flex; align-items:center; gap:9px; font-size:13px; color:var(--text-muted); }
 .legend-swatch{ width:14px; height:14px; border-radius:3px; }
-
+ 
 .timer{
   display:flex; align-items:center; gap:10px;
   background:rgba(255,77,109,.1); border:1px solid rgba(255,77,109,.35);
@@ -287,7 +289,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
   font-family:var(--font-mono); font-size:12.5px; margin-bottom:18px;
 }
 .timer b{ color:var(--stage); font-size:14px; }
-
+ 
 .seat-list{ display:flex; flex-direction:column; gap:10px; margin:16px 0; }
 .seat-row-item{
   display:flex; justify-content:space-between; align-items:center;
@@ -296,13 +298,13 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
 .seat-row-item .tag-mini{
   font-family:var(--font-mono); font-size:11px; color:var(--text-faint);
 }
-
+ 
 .summary-total{
   display:flex; justify-content:space-between; align-items:baseline;
   padding:16px 18px 4px;
 }
 .summary-total .num{ font-family:var(--font-display); font-size:26px; color:var(--marquee); }
-
+ 
 /* ---------- Steps ---------- */
 .steps{ display:flex; align-items:center; gap:0; margin:30px 0 36px; }
 .step{ display:flex; align-items:center; gap:10px; }
@@ -317,7 +319,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
 .step .label{ font-size:12.5px; color:var(--text-faint); }
 .step.is-active .label, .step.is-done .label{ color:var(--text); }
 .step-line{ width:44px; height:1px; background:var(--line); margin:0 10px; }
-
+ 
 /* ---------- Forms ---------- */
 .field{ margin-bottom:16px; }
 .field label{
@@ -330,7 +332,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
 }
 .field input::placeholder{ color:var(--text-faint); }
 .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-
+ 
 .pay-options{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:18px; }
 .pay-option{
   border:1px solid var(--line); border-radius:8px; padding:14px;
@@ -342,12 +344,12 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
   width:16px; height:16px; border-radius:50%; border:1px solid var(--text-faint);
 }
 .pay-option.is-active .radio{ border-color:var(--marquee); background:radial-gradient(var(--marquee) 0 40%, transparent 44%); }
-
+ 
 .panel{
   background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
   padding:26px;
 }
-
+ 
 /* ---------- Confirmation ---------- */
 .confirm-head{ text-align:center; padding:60px 0 10px; }
 .confirm-badge{
@@ -356,7 +358,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
   display:flex; align-items:center; justify-content:center; color:var(--glow); font-size:24px;
 }
 .confirm-head p{ color:var(--text-muted); margin-top:10px; }
-
+ 
 .ticket-digital{
   max-width:520px; margin:34px auto 0; background:var(--surface);
   border:1px solid var(--line); border-radius:16px; overflow:hidden;
@@ -383,7 +385,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
   text-align:center; font-family:var(--font-mono); color:var(--text-faint);
   font-size:12.5px; margin-top:18px; letter-spacing:.05em;
 }
-
+ 
 /* ---------- Backoffice ---------- */
 .bo-shell{ display:grid; grid-template-columns:230px 1fr; min-height:100vh; }
 .bo-side{
@@ -401,7 +403,7 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
 .bo-main{ padding:26px 32px 60px; }
 .bo-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:26px; flex-wrap:wrap; gap:14px; }
 .bo-top h1{ font-family:var(--font-display); font-size:26px; }
-
+ 
 .stat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:30px; }
 .stat-card{
   background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
@@ -411,10 +413,10 @@ h2.display{ font-size:clamp(24px,3vw,32px); }
 .stat-card .value{ font-family:var(--font-display); font-size:28px; margin:6px 0 4px; }
 .stat-card .delta{ font-size:12px; color:var(--glow); }
 .stat-card .delta.down{ color:var(--stage); }
-
+ 
 .panel-title{ display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
 .panel-title h2{ font-size:16px; font-weight:700; }
-
+ 
 table.bo-table{ width:100%; border-collapse:collapse; font-size:13.5px; }
 table.bo-table th{
   text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.06em;
@@ -431,14 +433,14 @@ table.bo-table tr:last-child td{ border-bottom:none; }
 .badge.out{ background:rgba(255,77,109,.14); color:var(--stage); }
 .progress{ width:100px; height:6px; border-radius:4px; background:var(--surface-3); overflow:hidden; }
 .progress i{ display:block; height:100%; background:var(--marquee); }
-
+ 
 .chart{ display:flex; align-items:flex-end; gap:14px; height:160px; padding:10px 6px 0; }
 .chart .bar-col{ display:flex; flex-direction:column; align-items:center; gap:8px; flex:1; }
 .chart .bar{ width:100%; border-radius:5px 5px 0 0; background:linear-gradient(180deg, var(--marquee), var(--marquee-dim)); }
 .chart .day{ font-size:11px; color:var(--text-faint); font-family:var(--font-mono); }
-
+ 
 .two-col-panels{ display:grid; grid-template-columns:1.4fr 1fr; gap:20px; }
-
+ 
 /* ---------- Access control screen ---------- */
 .scan-shell{
   min-height:100vh; display:flex; align-items:center; justify-content:center;
@@ -464,7 +466,7 @@ table.bo-table tr:last-child td{ border-bottom:none; }
 .corner.bl{ bottom:12px; left:12px; border-right:none; border-top:none; border-radius:0 0 0 6px; }
 .corner.br{ bottom:12px; right:12px; border-left:none; border-top:none; border-radius:0 0 6px 0; }
 .scan-hint{ text-align:center; color:var(--text-muted); font-size:13px; margin-top:8px; }
-
+ 
 .result-panel{
   margin:16px 20px; padding:18px; border-radius:14px;
   background:rgba(94,234,212,.10); border:1px solid var(--glow);
@@ -472,20 +474,61 @@ table.bo-table tr:last-child td{ border-bottom:none; }
 .result-panel .status{ display:flex; align-items:center; gap:8px; color:var(--glow); font-weight:800; font-size:14px; }
 .result-panel .name{ font-family:var(--font-display); font-size:20px; margin:10px 0 4px; }
 .result-panel .sub{ font-size:12.5px; color:var(--text-muted); font-family:var(--font-mono); }
-
+ 
 .scan-footer{
   margin-top:auto; padding:16px 20px; border-top:1px solid var(--line);
 }
 .count-row{ display:flex; justify-content:space-between; font-size:12px; color:var(--text-muted); margin-bottom:8px; font-family:var(--font-mono); }
 .count-bar{ height:6px; border-radius:4px; background:var(--surface-3); overflow:hidden; margin-bottom:14px; }
 .count-bar i{ display:block; height:100%; width:34%; background:var(--marquee); }
-
+ 
+/* =====================================================
+   RELOJ DE CUENTA REGRESIVA — ahora manejado por app.js
+   (setInterval real). El elemento .js-countdown arranca
+   con el texto inicial ya escrito en el HTML (data-seconds)
+   por si JS tardara en cargar, y JS lo va actualizando.
+   ===================================================== */
+.js-countdown.is-expired{ color: var(--stage); }
+[data-disable-on-expire].is-disabled{
+  opacity:.45; pointer-events:none; filter:grayscale(.4);
+}
+ 
+/* ---------- Login / Registro ---------- */
+.auth-shell{
+  min-height:calc(100vh - 65px); display:flex; align-items:center; justify-content:center;
+  padding:40px 20px;
+}
+.auth-card{
+  width:100%; max-width:420px;
+}
+.auth-card .stub-perf{ margin:18px 18px 0; }
+.auth-head{ padding:28px 26px 6px; text-align:center; }
+.auth-head .lock{
+  width:44px; height:44px; border-radius:50%; margin:0 auto 14px;
+  background:rgba(255,182,39,.10); border:1px solid var(--marquee);
+  display:flex; align-items:center; justify-content:center; color:var(--marquee); font-size:18px;
+}
+.auth-head p{ color:var(--text-muted); font-size:13px; margin:6px 0 0; }
+.auth-body{ padding:20px 26px 8px; }
+.auth-foot{ padding:16px 26px 26px; text-align:center; }
+.auth-foot p{ font-size:12.5px; color:var(--text-muted); margin:14px 0 0; }
+.auth-divider{
+  display:flex; align-items:center; gap:12px; margin:18px 0;
+  color:var(--text-faint); font-size:11.5px; font-family:var(--font-mono); text-transform:uppercase;
+}
+.auth-divider::before, .auth-divider::after{ content:""; flex:1; height:1px; background:var(--line); }
+.required-note{
+  display:flex; align-items:center; gap:9px; margin-bottom:20px;
+  background:rgba(255,182,39,.08); border:1px solid rgba(255,182,39,.35);
+  color:#FFD98A; padding:10px 14px; border-radius:8px; font-size:12.5px;
+}
+ 
 /* ---------- Footer note ---------- */
 .footnote{
   text-align:center; padding:30px 0 50px; color:var(--text-faint);
   font-size:12px; font-family:var(--font-mono);
 }
-
+ 
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .event-grid{ grid-template-columns:1fr 1fr; }
@@ -504,3 +547,90 @@ table.bo-table tr:last-child td{ border-bottom:none; }
   .stat-grid{ grid-template-columns:1fr 1fr; }
   h1.display{ font-size:32px; }
 }
+ 
+/* =====================================================
+   ACCOUNT AREA — "Mis entradas"
+   Barra de sección de cuenta + panel con pestaña y
+   listado de entradas compradas (tarjetas stub expandibles).
+   ===================================================== */
+.account-nav{
+  background:#0B0912; border-bottom:1px solid var(--line);
+}
+.account-nav .wrap{
+  display:flex; align-items:center; justify-content:flex-end;
+  gap:30px; padding:16px 28px; flex-wrap:wrap;
+}
+.account-nav a{
+  font-size:12.5px; font-weight:700; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--text-muted);
+  padding:4px 0; border-bottom:2px solid transparent;
+}
+.account-nav a:hover{ color:var(--text); }
+.account-nav a.is-active{ color:var(--marquee); border-color:var(--marquee); }
+.account-nav a.is-danger:hover{ color:var(--stage); }
+ 
+.account-hero{
+  padding:46px 0 40px;
+  background:
+    radial-gradient(ellipse 800px 380px at 15% 0%, rgba(255,182,39,.14), transparent 65%),
+    radial-gradient(ellipse 700px 420px at 100% 0%, rgba(255,77,109,.16), transparent 60%);
+  border-bottom:1px solid var(--line);
+}
+ 
+.account-panel{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  margin:-26px auto 60px; padding:8px 8px 28px; position:relative;
+}
+.tab-row{ display:flex; gap:6px; padding:14px 18px 18px; flex-wrap:wrap; }
+.tab-pill{
+  font-size:13px; font-weight:700; padding:10px 20px; border-radius:9px;
+  background:var(--surface-3); color:var(--text); border:1px solid var(--line);
+}
+.tab-pill.is-muted{ background:transparent; color:var(--text-muted); border-color:transparent; }
+ 
+.ticket-list{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(270px,1fr));
+  gap:20px; padding:6px 18px 0;
+}
+.ticket-card{ display:block; }
+.ticket-card summary{
+  list-style:none; cursor:pointer; display:flex; flex-direction:column;
+}
+.ticket-card summary::-webkit-details-marker{ display:none; }
+.ticket-card summary::marker{ content:""; }
+.ticket-status{
+  position:absolute; top:12px; right:12px;
+  font-family:var(--font-mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
+  padding:4px 10px; border-radius:20px; border:1px solid var(--line);
+  background:rgba(20,17,31,.7); backdrop-filter:blur(4px);
+}
+.ticket-status.upcoming{ color:var(--glow); border-color:var(--glow); }
+.ticket-status.past{ color:var(--text-faint); }
+.ticket-qty{ display:flex; align-items:baseline; gap:6px; font-family:var(--font-mono); }
+.ticket-qty b{ font-size:16px; color:var(--marquee); }
+.ticket-qty span{ font-size:10.5px; color:var(--text-faint); text-transform:uppercase; }
+.ticket-card .stub-foot .btn{ pointer-events:none; }
+.ticket-card[open] .stub-foot .chev{ transform:rotate(180deg); }
+.chev{ display:inline-block; transition:transform .15s ease; }
+ 
+.ticket-expand{
+  border-top:1px dashed var(--line); padding:18px 18px 4px;
+}
+.ticket-expand .qr-block{ width:64px; height:64px; }
+.ticket-expand .top{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; padding:0 0 16px; background:none; }
+.ticket-expand .details{ grid-template-columns:1fr 1fr; gap:12px; padding:0 0 18px; }
+.ticket-expand .details div span{ display:block; font-size:10.5px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.05em; margin-bottom:3px; }
+.ticket-expand .details div b{ font-family:var(--font-mono); font-size:12.5px; font-weight:500; }
+.ticket-expand .ticket-actions{ padding:0 0 4px; gap:8px; }
+.ticket-expand .order-code{ text-align:left; margin-top:0; font-size:11px; }
+ 
+.empty-state{
+  text-align:center; padding:60px 20px; color:var(--text-muted);
+}
+.empty-state .icon{ font-size:34px; margin-bottom:14px; }
+ 
+@media (max-width:620px){
+  .ticket-list{ grid-template-columns:1fr; }
+  .account-nav .wrap{ justify-content:flex-start; gap:18px; }
+}
+ 
