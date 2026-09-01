@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicketFlow — Iniciar sesión</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="proto-bar">
+  <div class="wrap">
+    <span class="proto-label">Prototipo · Pantalla 4/9</span>
+    <nav class="proto-nav">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="asientos.html">Asientos</a>
+      <a href="login.html" class="is-active">Login</a>
+      <a href="registro.html">Registro</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="confirmacion.html">Confirmación</a>
+      <a href="backoffice.html">Backoffice</a>
+      <a href="acceso.html">Acceso</a>
+    </nav>
+  </div>
+</div>
+
+<header class="appbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">TICKET<span class="dot">FLOW</span></a>
+    <nav>
+      <a href="#">Eventos</a>
+      <a href="#">Categorías</a>
+    </nav>
+  </div>
+</header>
+
+<main class="auth-shell">
+  <div class="wrap" style="display:flex; flex-direction:column; align-items:center;">
+    <div class="stub auth-card">
+      <div class="auth-head">
+        <div class="lock">🔒</div>
+        <h1 class="display" style="font-size:24px;">Iniciá sesión para continuar</h1>
+        <p>Necesitamos identificarte antes de reservar tus asientos y avanzar con el pago.</p>
+      </div>
+
+      <div class="stub-perf"></div>
+
+      <div class="auth-body">
+        <div class="required-note">⏱ Tu selección de asientos se mantiene reservada mientras iniciás sesión.</div>
+
+        <!-- id="loginForm": app.js (wireAuthForm) intercepta el submit,
+             toma el email cargado y redirige a `next` (o a checkout.html
+             si no hay next) agregando ?user=<email>. No hay backend real:
+             cualquier email/contraseña "loguea" en este prototipo. -->
+        <form id="loginForm">
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="field">
+            <label>Contraseña</label>
+            <input type="password" placeholder="••••••••" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Iniciar sesión y continuar</button>
+        </form>
+
+        <div class="auth-divider">o continuar con</div>
+
+        <!-- data-social-login: mismo mecanismo que el form, pero para
+             botones sueltos (no hay OAuth real, solo simula el email
+             resultante). Ver app.js, listener sobre [data-social-login]. -->
+        <a href="#" data-social-login="camila.fernandez@gmail.com" class="btn btn-ghost btn-block" style="margin-bottom:10px;">Google</a>
+        <a href="#" data-social-login="camila.fernandez@mp.com" class="btn btn-ghost btn-block">Mercado Pago ID</a>
+      </div>
+
+      <div class="auth-foot">
+        <p>¿No tenés cuenta? <a href="registro.html" style="color:var(--marquee); font-weight:700;">Creala gratis</a></p>
+      </div>
+    </div>
+
+    <p class="footnote">Pantalla estática de referencia — TicketFlow · Prototipo HTML/CSS/JS</p>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
