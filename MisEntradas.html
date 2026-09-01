@@ -1,0 +1,211 @@
+
+
+Mis entradas · HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicketFlow — Mis entradas</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+<div class="proto-bar">
+  <div class="wrap">
+    <span class="proto-label">Prototipo · Pantalla 8/10</span>
+    <nav class="proto-nav">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="asientos.html">Asientos</a>
+      <a href="login.html">Login</a>
+      <a href="registro.html">Registro</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="confirmacion.html">Confirmación</a>
+      <a href="mis-entradas.html" class="is-active">Mis entradas</a>
+      <a href="backoffice.html">Backoffice</a>
+      <a href="acceso.html">Acceso</a>
+    </nav>
+  </div>
+</div>
+ 
+<header class="appbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">TICKET<span class="dot">FLOW</span></a>
+    <nav>
+      <a href="#">Eventos</a>
+      <a href="#">Categorías</a>
+      <a href="#">Para organizadores</a>
+    </nav>
+    <div class="actions">
+      <a href="mis-entradas.html" class="btn btn-primary btn-sm">Mis entradas</a>
+    </div>
+  </div>
+</header>
+ 
+<!-- Barra de cuenta: equivalente a MIS ENTRADAS / MI CUENTA / SOPORTE / CERRAR SESIÓN -->
+<div class="account-nav">
+  <div class="wrap">
+    <a href="mis-entradas.html" class="is-active">Mis entradas</a>
+    <a href="#">Mi cuenta</a>
+    <a href="#">Soporte</a>
+    <a href="login.html" class="is-danger">Cerrar sesión</a>
+  </div>
+</div>
+ 
+<section class="account-hero">
+  <div class="wrap">
+    <p class="eyebrow"><span class="bulbs"><span></span><span></span><span></span></span> Camila Fernández</p>
+    <h1 class="display" style="font-size:clamp(28px,4vw,42px);">Mis entradas</h1>
+  </div>
+</section>
+ 
+<main class="wrap">
+  <div class="account-panel">
+ 
+    <div class="tab-row">
+      <span class="tab-pill">Mis entradas</span>
+      <span class="tab-pill is-muted">Historial de compras</span>
+    </div>
+ 
+    <div class="ticket-list">
+ 
+      <!-- Entrada 1: evento próximo, con 3 fechas (como el ejemplo BTS) -->
+      <details class="stub ticket-card">
+        <summary>
+          <div class="event-media" style="background:linear-gradient(135deg,#141017,#2a1e2e); position:relative;">
+            <span class="tag">K-Pop · Estadio</span>
+            <span class="ticket-status upcoming">Próxima</span>
+          </div>
+          <div class="event-body">
+            <p class="venue">Estadio Único Ciudad de La Plata</p>
+            <h3>World Tour — Arirang</h3>
+            <p class="meta">MIÉ 21 · VIE 23 · SÁB 24 OCT 2026</p>
+          </div>
+          <div class="stub-perf"></div>
+          <div class="stub-foot">
+            <div class="ticket-qty"><b>2</b><span>Entradas</span></div>
+            <span class="btn btn-ghost btn-sm">Ver entrada <span class="chev">▾</span></span>
+          </div>
+        </summary>
+        <div class="ticket-expand">
+          <div class="top">
+            <div>
+              <p class="venue" style="margin-bottom:4px;">Sáb 24 Oct · 20:00 hs</p>
+              <p class="venue">Puerta 4 · Acceso Norte</p>
+            </div>
+            <div class="qr-block" aria-label="Código QR de la entrada"></div>
+          </div>
+          <div class="details">
+            <div><span>Sector</span><b>Campo VIP</b></div>
+            <div><span>Entradas</span><b>2 generales</b></div>
+            <div><span>Titular</span><b>Camila Fernández</b></div>
+            <div><span>Tipo</span><b>3 fechas · Bono válido 1 día</b></div>
+          </div>
+          <div class="ticket-actions">
+            <a href="confirmacion.html" class="btn btn-primary btn-block btn-sm">Descargar PDF</a>
+            <a href="#" class="btn btn-ghost btn-block btn-sm">Agregar a Wallet</a>
+          </div>
+          <p class="order-code">Orden #TF-2026-091027</p>
+        </div>
+      </details>
+ 
+      <!-- Entrada 2: evento próximo -->
+      <details class="stub ticket-card">
+        <summary>
+          <div class="event-media" style="background:linear-gradient(135deg,#3a2a5c,#7a3b6c); position:relative;">
+            <span class="tag">Rock · Estadio</span>
+            <span class="ticket-status upcoming">Próxima</span>
+          </div>
+          <div class="event-body">
+            <p class="venue">Estadio Malvinas Argentinas</p>
+            <h3>Nafta Súper</h3>
+            <p class="meta">VIE 12 SEP · 21:00</p>
+          </div>
+          <div class="stub-perf"></div>
+          <div class="stub-foot">
+            <div class="ticket-qty"><b>2</b><span>Entradas</span></div>
+            <span class="btn btn-ghost btn-sm">Ver entrada <span class="chev">▾</span></span>
+          </div>
+        </summary>
+        <div class="ticket-expand">
+          <div class="top">
+            <div>
+              <p class="venue" style="margin-bottom:4px;">Vie 12 Sep · 21:00 hs</p>
+              <p class="venue">Puerta 2 · Sector VIP</p>
+            </div>
+            <div class="qr-block" aria-label="Código QR de la entrada"></div>
+          </div>
+          <div class="details">
+            <div><span>Sector</span><b>VIP · Fila A</b></div>
+            <div><span>Asientos</span><b>04, 05</b></div>
+            <div><span>Titular</span><b>Camila Fernández</b></div>
+            <div><span>Tipo</span><b>Entrada general VIP</b></div>
+          </div>
+          <div class="ticket-actions">
+            <a href="confirmacion.html" class="btn btn-primary btn-block btn-sm">Descargar PDF</a>
+            <a href="#" class="btn btn-ghost btn-block btn-sm">Agregar a Wallet</a>
+          </div>
+          <p class="order-code">Orden #TF-2026-084512</p>
+        </div>
+      </details>
+ 
+      <!-- Entrada 3: evento pasado -->
+      <details class="stub ticket-card">
+        <summary>
+          <div class="event-media" style="background:linear-gradient(135deg,#233d2b,#3f6e2c); position:relative; filter:grayscale(.5); opacity:.7;">
+            <span class="tag">Deportes</span>
+            <span class="ticket-status past">Finalizada</span>
+          </div>
+          <div class="event-body">
+            <p class="venue">Arena Norte</p>
+            <h3>Copa Metropolitana — Final</h3>
+            <p class="meta">JUE 24 JUL · 19:00</p>
+          </div>
+          <div class="stub-perf"></div>
+          <div class="stub-foot">
+            <div class="ticket-qty"><b>1</b><span>Entrada</span></div>
+            <span class="btn btn-ghost btn-sm">Ver entrada <span class="chev">▾</span></span>
+          </div>
+        </summary>
+        <div class="ticket-expand">
+          <div class="top">
+            <div>
+              <p class="venue" style="margin-bottom:4px;">Jue 24 Jul · 19:00 hs</p>
+              <p class="venue">Puerta 1 · Platea Este</p>
+            </div>
+            <div class="qr-block" aria-label="Código QR de la entrada" style="filter:grayscale(1); opacity:.5;"></div>
+          </div>
+          <div class="details">
+            <div><span>Sector</span><b>Platea Este</b></div>
+            <div><span>Asiento</span><b>Fila 12, Butaca 8</b></div>
+            <div><span>Titular</span><b>Camila Fernández</b></div>
+            <div><span>Tipo</span><b>Entrada general</b></div>
+          </div>
+          <div class="ticket-actions">
+            <a href="#" class="btn btn-ghost btn-block btn-sm">Descargar comprobante</a>
+          </div>
+          <p class="order-code">Orden #TF-2026-061809</p>
+        </div>
+      </details>
+ 
+    </div>
+ 
+    <!-- Estado vacío de referencia (oculto por defecto, queda documentado para cuando no haya compras) -->
+    <!--
+    <div class="empty-state">
+      <div class="icon">🎟️</div>
+      <h2 class="display" style="font-size:22px;">Todavía no tenés entradas</h2>
+      <p style="margin:8px 0 20px;">Cuando compres una entrada, la vas a ver acá.</p>
+      <a href="index.html" class="btn btn-primary btn-sm">Explorar eventos</a>
+    </div>
+    -->
+ 
+  </div>
+ 
+  <p class="footnote">Pantalla estática de referencia — TicketFlow · Prototipo HTML/CSS</p>
+</main>
+ 
+</body>
+</html>
+ 
