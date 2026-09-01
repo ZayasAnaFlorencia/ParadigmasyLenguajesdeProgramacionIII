@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicketFlow — Crear cuenta</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="proto-bar">
+  <div class="wrap">
+    <span class="proto-label">Prototipo · Pantalla 5/9</span>
+    <nav class="proto-nav">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="asientos.html">Asientos</a>
+      <a href="login.html">Login</a>
+      <a href="registro.html" class="is-active">Registro</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="confirmacion.html">Confirmación</a>
+      <a href="backoffice.html">Backoffice</a>
+      <a href="acceso.html">Acceso</a>
+    </nav>
+  </div>
+</div>
+
+<header class="appbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">TICKET<span class="dot">FLOW</span></a>
+    <nav>
+      <a href="#">Eventos</a>
+      <a href="#">Categorías</a>
+    </nav>
+  </div>
+</header>
+
+<main class="auth-shell">
+  <div class="wrap" style="display:flex; flex-direction:column; align-items:center;">
+    <div class="stub auth-card">
+      <div class="auth-head">
+        <div class="lock">✦</div>
+        <h1 class="display" style="font-size:24px;">Creá tu cuenta</h1>
+        <p>Es rápido, y la vas a necesitar para completar cualquier compra.</p>
+      </div>
+
+      <div class="stub-perf"></div>
+
+      <div class="auth-body">
+        <!-- id="registroForm": mismo mecanismo que loginForm (ver
+             app.js → wireAuthForm), pero registrado aparte para que
+             cada página dispare su propio listener sin pisarse. -->
+        <form id="registroForm">
+          <div class="field-row">
+            <div class="field">
+              <label>Nombre</label>
+              <input type="text" placeholder="Camila" required>
+            </div>
+            <div class="field">
+              <label>Apellido</label>
+              <input type="text" placeholder="Fernández" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="field">
+            <label>DNI</label>
+            <input type="text" placeholder="00.000.000" required>
+          </div>
+          <div class="field">
+            <label>Contraseña</label>
+            <input type="password" placeholder="Mínimo 8 caracteres" required minlength="8">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Crear cuenta y continuar</button>
+        </form>
+      </div>
+
+      <div class="auth-foot">
+        <p>¿Ya tenés cuenta? <a href="login.html" style="color:var(--marquee); font-weight:700;">Iniciá sesión</a></p>
+      </div>
+    </div>
+
+    <p class="footnote">Pantalla estática de referencia — TicketFlow · Prototipo HTML/CSS/JS</p>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
