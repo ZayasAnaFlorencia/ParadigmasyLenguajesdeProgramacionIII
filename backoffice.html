@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicketFlow — Backoffice</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="proto-bar">
+  <div class="wrap">
+    <span class="proto-label">Prototipo · Pantalla 6/7</span>
+    <nav class="proto-nav">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="asientos.html">Asientos</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="confirmacion.html">Confirmación</a>
+      <a href="backoffice.html" class="is-active">Backoffice</a>
+      <a href="acceso.html">Acceso</a>
+    </nav>
+  </div>
+</div>
+
+<div class="bo-shell">
+  <aside class="bo-side">
+    <div class="brand" style="font-size:18px;">TICKET<span class="dot">FLOW</span></div>
+    <nav>
+      <a href="#" class="is-active"><span class="icon">▦</span> Eventos</a>
+      <a href="#"><span class="icon">$</span> Ventas</a>
+      <a href="#"><span class="icon">◔</span> Reportes</a>
+      <a href="#"><span class="icon">▤</span> Promociones</a>
+      <a href="#"><span class="icon">⚙</span> Configuración</a>
+    </nav>
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid var(--line); font-size:12.5px; color:var(--text-muted);">
+      Producciones del Sur<br><span style="color:var(--text-faint); font-size:11.5px;">org@produccionesdelsur.com</span>
+    </div>
+  </aside>
+
+  <div class="bo-main">
+    <div class="bo-top">
+      <h1>Panel de eventos</h1>
+      <a href="#" class="btn btn-primary btn-sm">+ Nuevo evento</a>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="label">VENTAS HOY</div>
+        <div class="value">$412.800</div>
+        <div class="delta">↑ 18% vs. ayer</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">ENTRADAS VENDIDAS</div>
+        <div class="value">3.184</div>
+        <div class="delta">↑ 6% esta semana</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">EVENTOS ACTIVOS</div>
+        <div class="value">7</div>
+        <div class="delta" style="color:var(--text-muted);">2 en borrador</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">PRÓXIMO EVENTO</div>
+        <div class="value" style="font-size:18px; font-family:var(--font-body); font-weight:700;">Nafta Súper</div>
+        <div class="delta down">Vie 12 Sep</div>
+      </div>
+    </div>
+
+    <div class="two-col-panels">
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Mis eventos</h2>
+          <a href="#" class="btn btn-ghost btn-sm">Ver todos</a>
+        </div>
+        <table class="bo-table">
+          <thead>
+            <tr>
+              <th>Evento</th>
+              <th>Fecha</th>
+              <th>Vendido</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nafta Súper</td>
+              <td>12 Sep</td>
+              <td>
+                <div class="progress"><i style="width:82%"></i></div>
+              </td>
+              <td><span class="badge on">Publicado</span></td>
+            </tr>
+            <tr>
+              <td>La Última Función</td>
+              <td>20 Sep</td>
+              <td>
+                <div class="progress"><i style="width:54%"></i></div>
+              </td>
+              <td><span class="badge on">Publicado</span></td>
+            </tr>
+            <tr>
+              <td>Festival Cauce</td>
+              <td>5 Oct</td>
+              <td>
+                <div class="progress"><i style="width:100%"></i></div>
+              </td>
+              <td><span class="badge out">Agotado</span></td>
+            </tr>
+            <tr>
+              <td>Copa Metropolitana</td>
+              <td>24 Sep</td>
+              <td>
+                <div class="progress"><i style="width:31%"></i></div>
+              </td>
+              <td><span class="badge on">Publicado</span></td>
+            </tr>
+            <tr>
+              <td>Marea Baja en Vivo</td>
+              <td>11 Oct</td>
+              <td>
+                <div class="progress"><i style="width:0%"></i></div>
+              </td>
+              <td><span class="badge draft">Borrador</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Ventas — últimos 7 días</h2>
+        </div>
+        <div class="chart">
+          <div class="bar-col"><div class="bar" style="height:60px;"></div><span class="day">Lun</span></div>
+          <div class="bar-col"><div class="bar" style="height:88px;"></div><span class="day">Mar</span></div>
+          <div class="bar-col"><div class="bar" style="height:52px;"></div><span class="day">Mié</span></div>
+          <div class="bar-col"><div class="bar" style="height:120px;"></div><span class="day">Jue</span></div>
+          <div class="bar-col"><div class="bar" style="height:96px;"></div><span class="day">Vie</span></div>
+          <div class="bar-col"><div class="bar" style="height:140px;"></div><span class="day">Sáb</span></div>
+          <div class="bar-col"><div class="bar" style="height:70px;"></div><span class="day">Dom</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

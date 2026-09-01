@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicketFlow — Selección de asientos</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="proto-bar">
+  <div class="wrap">
+    <span class="proto-label">Prototipo · Pantalla 3/7</span>
+    <nav class="proto-nav">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="asientos.html" class="is-active">Asientos</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="confirmacion.html">Confirmación</a>
+      <a href="backoffice.html">Backoffice</a>
+      <a href="acceso.html">Acceso</a>
+    </nav>
+  </div>
+</div>
+
+<header class="appbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">TICKET<span class="dot">FLOW</span></a>
+    <nav>
+      <a href="#">Eventos</a>
+      <a href="#">Categorías</a>
+      <a href="#">Para organizadores</a>
+    </nav>
+    <div class="actions">
+      <a href="#" class="btn btn-ghost btn-sm">Iniciar sesión</a>
+      <a href="#" class="btn btn-primary btn-sm">Mis entradas</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div style="padding-top:30px;">
+    <p class="eyebrow">Nafta Súper · Vie 12 Sep · 21:00</p>
+    <h2 class="display" style="font-size:26px;">Elegí tu ubicación</h2>
+  </div>
+
+  <div class="layout-2col">
+    <div>
+      <div class="stage-shape">Escenario</div>
+
+      <div class="seat-map">
+        <div class="seat-row">
+          <div class="seat vip"></div><div class="seat vip"></div><div class="seat vip"></div><div class="seat vip selected"></div><div class="seat vip selected"></div><div class="seat vip"></div><div class="seat vip"></div><div class="seat vip"></div>
+        </div>
+        <div class="seat-row">
+          <div class="seat vip"></div><div class="seat vip"></div><div class="seat sold"></div><div class="seat vip"></div><div class="seat vip"></div><div class="seat vip"></div><div class="seat sold"></div><div class="seat vip"></div>
+        </div>
+        <div class="seat-row">
+          <div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div>
+        </div>
+        <div class="seat-row">
+          <div class="seat platea"></div><div class="seat sold"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat sold"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div>
+        </div>
+        <div class="seat-row">
+          <div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat platea"></div><div class="seat sold"></div><div class="seat platea"></div><div class="seat platea"></div>
+        </div>
+        <div class="seat-row">
+          <div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div>
+        </div>
+        <div class="seat-row">
+          <div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat sold"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat campo"></div><div class="seat sold"></div><div class="seat campo"></div><div class="seat campo"></div>
+        </div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item"><span class="legend-swatch" style="background:rgba(255,182,39,.5); border:1px solid var(--marquee);"></span> VIP — $28.000</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:rgba(255,77,109,.45); border:1px solid var(--stage);"></span> Platea — $19.500</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:rgba(94,234,212,.4); border:1px solid var(--glow);"></span> Campo — $14.000</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--void); border:1px solid var(--line); opacity:.5;"></span> Agotado</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--marquee); border:1px solid var(--marquee);"></span> Tu selección</div>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="timer">⏱ Tenés <b>08:32</b> para completar tu compra antes de liberar los asientos</div>
+
+      <div class="stub">
+        <div style="padding:20px 20px 4px;">
+          <p class="eyebrow" style="margin-bottom:2px;">Tu selección</p>
+          <h3 style="font-family:var(--font-display); font-size:19px; margin:4px 0 0; font-weight:400;">2 entradas · VIP</h3>
+        </div>
+        <div style="padding:14px 20px 4px;">
+          <div class="seat-list">
+            <div class="seat-row-item">
+              <span>Sector VIP · Fila A</span>
+              <span class="tag-mini">Asiento 04</span>
+            </div>
+            <div class="seat-row-item">
+              <span>Sector VIP · Fila A</span>
+              <span class="tag-mini">Asiento 05</span>
+            </div>
+          </div>
+        </div>
+        <div class="stub-perf"></div>
+        <div class="summary-total">
+          <span style="font-size:12.5px; color:var(--text-muted);">Total</span>
+          <span class="num">$56.000</span>
+        </div>
+        <div style="padding:8px 20px 20px;">
+          <a href="checkout.html" class="btn btn-primary btn-block">Continuar</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <p class="footnote">Pantalla estática de referencia — TicketFlow · Prototipo HTML/CSS</p>
+</main>
+
+</body>
+</html>

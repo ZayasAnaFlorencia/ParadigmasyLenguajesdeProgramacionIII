@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicketFlow — Checkout</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="proto-bar">
+  <div class="wrap">
+    <span class="proto-label">Prototipo · Pantalla 4/7</span>
+    <nav class="proto-nav">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="asientos.html">Asientos</a>
+      <a href="checkout.html" class="is-active">Checkout</a>
+      <a href="confirmacion.html">Confirmación</a>
+      <a href="backoffice.html">Backoffice</a>
+      <a href="acceso.html">Acceso</a>
+    </nav>
+  </div>
+</div>
+
+<header class="appbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">TICKET<span class="dot">FLOW</span></a>
+    <nav>
+      <a href="#">Eventos</a>
+      <a href="#">Categorías</a>
+      <a href="#">Para organizadores</a>
+    </nav>
+    <div class="actions">
+      <a href="#" class="btn btn-ghost btn-sm">Iniciar sesión</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="steps" style="padding-top:30px;">
+    <div class="step is-done"><div class="circle">✓</div><span class="label">Carrito</span></div>
+    <div class="step-line"></div>
+    <div class="step is-done"><div class="circle">✓</div><span class="label">Datos</span></div>
+    <div class="step-line"></div>
+    <div class="step is-active"><div class="circle">3</div><span class="label">Pago</span></div>
+    <div class="step-line"></div>
+    <div class="step"><div class="circle">4</div><span class="label">Confirmación</span></div>
+  </div>
+
+  <div class="layout-2col" style="padding-top:6px;">
+    <div>
+      <div class="timer">⏱ Tenés <b>05:14</b> para completar el pago</div>
+
+      <div class="panel" style="margin-bottom:20px;">
+        <h2 class="display" style="font-size:18px; font-family:var(--font-body); font-weight:700; margin-bottom:18px;">Datos del comprador</h2>
+        <div class="field-row">
+          <div class="field">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Como figura en tu DNI" value="Camila Fernández">
+          </div>
+          <div class="field">
+            <label>DNI</label>
+            <input type="text" placeholder="00.000.000" value="34.221.098">
+          </div>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" placeholder="tu@email.com" value="camila.fernandez@email.com">
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 class="display" style="font-size:18px; font-family:var(--font-body); font-weight:700; margin-bottom:18px;">Método de pago</h2>
+        <div class="pay-options">
+          <div class="pay-option is-active"><span class="radio"></span> Tarjeta de crédito/débito</div>
+          <div class="pay-option"><span class="radio"></span> Mercado Pago</div>
+        </div>
+        <div class="field">
+          <label>Número de tarjeta</label>
+          <input type="text" placeholder="0000 0000 0000 0000" value="4517 •••• •••• 2231">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Vencimiento</label>
+            <input type="text" placeholder="MM/AA" value="09/29">
+          </div>
+          <div class="field">
+            <label>Código de seguridad</label>
+            <input type="text" placeholder="CVV" value="•••">
+          </div>
+        </div>
+        <div class="field">
+          <label>Cuotas</label>
+          <input type="text" value="3 cuotas sin interés — $18.667/mes">
+        </div>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="stub">
+        <div style="padding:20px 20px 6px;">
+          <p class="eyebrow" style="margin-bottom:4px;">Resumen de tu compra</p>
+          <h3 style="font-family:var(--font-display); font-size:19px; margin:4px 0 0; font-weight:400;">Nafta Súper</h3>
+          <p style="font-size:12px; color:var(--text-faint); margin:2px 0 0;">Vie 12 Sep · 21:00 · Estadio Malvinas Argentinas</p>
+        </div>
+        <div style="padding:12px 20px 0;">
+          <div class="seat-list">
+            <div class="seat-row-item"><span>VIP · Fila A · Asiento 04</span><span class="tag-mini">$28.000</span></div>
+            <div class="seat-row-item"><span>VIP · Fila A · Asiento 05</span><span class="tag-mini">$28.000</span></div>
+            <div class="seat-row-item"><span>Cargo por servicio</span><span class="tag-mini">$4.480</span></div>
+          </div>
+        </div>
+        <div class="stub-perf"></div>
+        <div class="summary-total">
+          <span style="font-size:12.5px; color:var(--text-muted);">Total</span>
+          <span class="num">$60.480</span>
+        </div>
+        <div style="padding:8px 20px 20px;">
+          <a href="confirmacion.html" class="btn btn-primary btn-block">Confirmar y pagar</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <p class="footnote">Pantalla estática de referencia — TicketFlow · Prototipo HTML/CSS</p>
+</main>
+
+</body>
+</html>
