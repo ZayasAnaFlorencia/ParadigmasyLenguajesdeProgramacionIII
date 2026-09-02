@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicketFlow — Tu inicio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="proto-bar">
+  <div class="wrap">
+    <span class="proto-label">Prototipo · Pantalla 10/10</span>
+    <nav class="proto-nav">
+      <a href="index.html">Home</a>
+      <a href="landing_page.html" class="is-active">Landing (logueado)</a>
+      <a href="evento.html">Evento</a>
+      <a href="asientos.html">Asientos</a>
+      <a href="login.html">Login</a>
+      <a href="registro.html">Registro</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="confirmacion.html">Confirmación</a>
+      <a href="backoffice.html">Backoffice</a>
+      <a href="acceso.html">Acceso</a>
+    </nav>
+  </div>
+</div>
+
+<header class="appbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">TICKET<span class="dot">FLOW</span></a>
+    <nav>
+      <a href="#">Eventos</a>
+      <a href="#">Categorías</a>
+      <a href="#">Para organizadores</a>
+    </nav>
+    <div class="actions">
+      <!-- app.js (paintSessionSlot) escribe acá el email logueado.
+           Si por algún motivo esta página se viera sin sesión, ni
+           siquiera llegaría a renderizar esto: routeHomeByAuth() ya
+           te habría mandado de vuelta a index.html antes. -->
+      <span data-user-slot style="font-size:12.5px; color:var(--glow); margin-right:6px;"></span>
+      <a href="backoffice.html" class="btn btn-ghost btn-sm">Cerrar sesión</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow"><span class="bulbs"><span></span><span></span><span></span></span> Bienvenido de nuevo</p>
+    <h1 class="display">Hola de nuevo.<br>Esto es lo tuyo.</h1>
+    <p class="lead">Esta es la pantalla que ve alguien que ya inició sesión — en vez del home genérico, arranca directo con sus entradas y accesos rápidos.</p>
+  </section>
+
+  <section style="padding:10px 0 50px;">
+    <div class="event-grid">
+
+      <a href="confirmacion.html" class="stub event-card">
+        <div class="event-media" style="background:linear-gradient(135deg,#3a2a5c,#7a3b6c); display:flex; align-items:center; justify-content:center;">
+          <span class="tag">Tus entradas</span>
+        </div>
+        <div class="event-body">
+          <p class="venue">Compra confirmada</p>
+          <h3>Nafta Súper</h3>
+          <p class="meta">VIE 12 SEP · 21:00 · 2 entradas</p>
+        </div>
+        <div class="stub-perf"></div>
+        <div class="stub-foot">
+          <div class="price"><span>Ver</span><b>Entrada digital</b></div>
+        </div>
+      </a>
+
+      <a href="index.html" class="stub event-card">
+        <div class="event-media" style="background:linear-gradient(135deg,#1f2f4d,#2c6e6e); display:flex; align-items:center; justify-content:center;">
+          <span class="tag">Explorar</span>
+        </div>
+        <div class="event-body">
+          <p class="venue">Catálogo completo</p>
+          <h3>Ver todos los eventos</h3>
+          <p class="meta">Con buscador y filtros por categoría</p>
+        </div>
+        <div class="stub-perf"></div>
+        <div class="stub-foot">
+          <div class="price"><span>Ir a</span><b>Home pública</b></div>
+        </div>
+      </a>
+
+      <a href="backoffice.html" class="stub event-card">
+        <div class="event-media" style="background:linear-gradient(135deg,#233d2b,#3f6e2c); display:flex; align-items:center; justify-content:center;">
+          <span class="tag">Organizador</span>
+        </div>
+        <div class="event-body">
+          <p class="venue">Solo cuentas admin</p>
+          <h3>Panel de backoffice</h3>
+          <p class="meta">Ventas, eventos y reportes</p>
+        </div>
+        <div class="stub-perf"></div>
+        <div class="stub-foot">
+          <div class="price"><span>Requiere</span><b>Rol organizador</b></div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <p class="footnote">Pantalla estática de referencia — TicketFlow · Prototipo HTML/CSS/JS</p>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
