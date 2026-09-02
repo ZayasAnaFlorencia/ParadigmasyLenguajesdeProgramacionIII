@@ -8,20 +8,35 @@
 </head>
 <body>
 
-
+<div class="proto-bar">
+  <div class="wrap">
+    <span class="proto-label">Prototipo · Pantalla 1/9</span>
+    <nav class="proto-nav">
+      <a href="index.html" class="is-active">Home</a>
+      <a href="landing_page.html">Landing (logueado)</a>
+      <a href="evento.html">Evento</a>
+      <a href="asientos.html">Asientos</a>
+      <a href="login.html">Login</a>
+      <a href="registro.html">Registro</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="confirmacion.html">Confirmación</a>
+      <a href="backoffice.html">Backoffice</a>
+      <a href="acceso.html">Acceso</a>
+    </nav>
+  </div>
+</div>
 
 <header class="appbar">
   <div class="wrap">
     <div class="brand">TICKET<span class="dot">FLOW</span></div>
     <nav>
-      <a href="index.html" class="is-active">Home</a>
       <a href="#">Eventos</a>
       <a href="#">Categorías</a>
       <a href="#">Para organizadores</a>
     </nav>
     <div class="actions">
-      <a href="Login.html" class="btn btn-ghost btn-sm">Iniciar sesión</a>
-      <a href="MisEntradas.html" class="btn btn-primary btn-sm">Mis entradas</a>
+      <a href="login.html" class="btn btn-ghost btn-sm">Iniciar sesión</a>
+      <a href="#" class="btn btn-primary btn-sm">Mis entradas</a>
     </div>
   </div>
 </header>
@@ -33,23 +48,28 @@
     <p class="lead">Recitales, teatro y deportes. Elegí tu asiento en el mapa del venue y comprá en minutos.</p>
 
     <div class="searchbar">
-      <input type="text" placeholder="Buscar artista, evento o venue…">
-      <button class="btn btn-primary">Buscar</button>
+      <input type="text" id="eventSearch" placeholder="Buscar artista, evento o venue…">
+      <button type="button" id="searchBtn" class="btn btn-primary">Buscar</button>
     </div>
-    <div class="chips">
-      <span class="chip is-active">Todos</span>
-      <span class="chip">Conciertos</span>
-      <span class="chip">Teatro</span>
-      <span class="chip">Deportes</span>
-      <span class="chip">Stand-up</span>
-      <span class="chip">Festivales</span>
+    <div class="chips" id="categoryChips">
+      <span class="chip is-active" data-category="all">Todos</span>
+      <span class="chip" data-category="Conciertos">Conciertos</span>
+      <span class="chip" data-category="Teatro">Teatro</span>
+      <span class="chip" data-category="Deportes">Deportes</span>
+      <span class="chip" data-category="Stand-up">Stand-up</span>
+      <span class="chip" data-category="Festivales">Festivales</span>
     </div>
   </section>
 
   <section>
-    <div class="event-grid">
+    <div class="event-grid" id="eventGrid">
+      <!-- Se muestra solo si la búsqueda/filtro no encuentra ningún evento.
+           app.js (wireEventSearch) la muestra/oculta; arranca oculta. -->
+      <p id="noResultsMsg" style="display:none; grid-column:1/-1; text-align:center; color:var(--text-muted); padding:40px 0;">
+        No encontramos eventos que coincidan con tu búsqueda.
+      </p>
 
-      <a href="evento.html" class="stub event-card">
+      <a href="evento.html" class="stub event-card" data-category="Conciertos">
         <div class="event-media" style="background:linear-gradient(135deg,#3a2a5c,#7a3b6c);">
           <span class="tag">Rock · Estadio</span>
         </div>
@@ -68,7 +88,7 @@
         </div>
       </a>
 
-      <a href="evento.html" class="stub event-card">
+      <a href="evento.html" class="stub event-card" data-category="Teatro">
         <div class="event-media" style="background:linear-gradient(135deg,#1f2f4d,#2c6e6e);">
           <span class="tag">Teatro</span>
         </div>
@@ -87,7 +107,7 @@
         </div>
       </a>
 
-      <a href="evento.html" class="stub event-card">
+      <a href="evento.html" class="stub event-card" data-category="Festivales">
         <div class="event-media" style="background:linear-gradient(135deg,#4a2148,#a8452f);">
           <span class="tag">Festival</span>
         </div>
@@ -106,7 +126,7 @@
         </div>
       </a>
 
-      <a href="evento.html" class="stub event-card">
+      <a href="evento.html" class="stub event-card" data-category="Deportes">
         <div class="event-media" style="background:linear-gradient(135deg,#233d2b,#3f6e2c);">
           <span class="tag">Deportes</span>
         </div>
@@ -125,7 +145,7 @@
         </div>
       </a>
 
-      <a href="evento.html" class="stub event-card">
+      <a href="evento.html" class="stub event-card" data-category="Stand-up">
         <div class="event-media" style="background:linear-gradient(135deg,#5c2a3a,#2a2a5c);">
           <span class="tag">Stand-up</span>
         </div>
@@ -144,7 +164,7 @@
         </div>
       </a>
 
-      <a href="evento.html" class="stub event-card">
+      <a href="evento.html" class="stub event-card" data-category="Conciertos">
         <div class="event-media" style="background:linear-gradient(135deg,#2a4a5c,#5c4a2a);">
           <span class="tag">Conciertos</span>
         </div>
@@ -162,12 +182,13 @@
           </div>
         </div>
       </a>
-      <script src="app.js"></script>
+
     </div>
   </section>
 
-  <p class="footnote">TicketFlow</p>
+  <p class="footnote">Pantalla estática de referencia — TicketFlow · Prototipo HTML/CSS/JS</p>
 </main>
 
+<script src="app.js"></script>
 </body>
 </html>
