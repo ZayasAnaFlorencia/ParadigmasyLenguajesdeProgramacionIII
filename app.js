@@ -73,12 +73,65 @@
     });
   }
 
+  // ---------- 5) Buscador + chips de categoría (home) ----------
+  // Filtra las tarjetas de #eventGrid combinando el texto de #searchInput
+  // con la categoría activa de #chipFilters. Usa data-search / data-category
+  // que ya vienen en cada .event-card.
+  function initSearchAndFilters() {
+    const grid = document.getElementById("eventGrid");
+    const searchForm = document.getElementById("searchForm");
+    const searchInput = document.getElementById("searchInput");
+    const chipFilters = document.getElementById("chipFilters");
+    const noResults = document.getElementById("noResults");
+    if (!grid || !searchInput) return;
+
+    const cards = Array.from(grid.querySelectorAll(".event-card"));
+    let activeCategory = "todos";
+
+    function applyFilters() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const matchesCategory = activeCategory === "todos" || card.dataset.category === activeCategory;
+        const haystack = `${card.dataset.search || ""} ${card.textContent}`.toLowerCase();
+        const matchesSearch = query === "" || haystack.includes(query);
+        const visible = matchesCategory && matchesSearch;
+        card.style.display = visible ? "" : "none";
+        if (visible) visibleCount += 1;
+      });
+
+      if (noResults) noResults.hidden = visibleCount > 0;
+    }
+
+    if (searchForm) {
+      searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        applyFilters();
+      });
+    }
+    // Filtra en vivo mientras se escribe, no solo al apretar "Buscar"
+    searchInput.addEventListener("input", applyFilters);
+
+    if (chipFilters) {
+      chipFilters.querySelectorAll(".chip").forEach((chip) => {
+        chip.addEventListener("click", () => {
+          chipFilters.querySelectorAll(".chip").forEach((c) => c.classList.remove("is-active"));
+          chip.classList.add("is-active");
+          activeCategory = chip.dataset.filter;
+          applyFilters();
+        });
+      });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     enforceAuthGuard();
     paintSessionSlot();
     document.querySelectorAll(".js-countdown").forEach(startCountdown);
     wireAuthForm("loginForm", "checkout.html");
     wireAuthForm("registroForm", "checkout.html");
+    initSearchAndFilters();
 
     // Botones "Google" / "Mercado Pago ID" en login: también simulan sesión
     document.querySelectorAll("[data-social-login]").forEach((btn) => {
